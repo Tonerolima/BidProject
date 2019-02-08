@@ -458,3 +458,19 @@ h5 {
   position: absolute;
   right: 12px;
 }
+
+.action-buttons {
+  margin-top: 42px;
+  margin-left: 32px;
+  line-height: 1.3;
+}
+
+.action-buttons > button {
+  width: 135px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.action-buttons > button:nth-of-type(2) {
+  border: 1px solid #d8e5ee;
+}
