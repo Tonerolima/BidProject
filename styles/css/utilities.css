@@ -15,7 +15,7 @@
 }
 
 .fs-md {
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 .fs-sm {
@@ -28,6 +28,10 @@
 
 .circle {
   border-radius: 50%;
+}
+
+.d-0 {
+  display: none;
 }
 
 .d-f {
@@ -77,4 +81,9 @@
 
 .w-100 {
   width: 100%;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
 }
