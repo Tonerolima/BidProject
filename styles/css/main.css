@@ -326,7 +326,17 @@ h5 {
 }
 
 .bundles {
+  position: relative;
   margin-top: 24px;
+}
+
+.bundles .expand-icon {
+  position: absolute;
+  top: -70px;
+  right: 35px;
+  transform: rotate(-31deg);
+  color: #0093ee;
+  cursor: pointer;
 }
 
 .bundles .info {
