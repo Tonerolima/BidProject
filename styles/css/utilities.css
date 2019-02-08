@@ -26,6 +26,10 @@
   border-radius: 4px;
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 .d-f {
   display: flex;
 }
@@ -58,10 +62,14 @@
   flex-direction: column;
 }
 
-.ff-cb {
-  font-family: "Circular Book";
+.ff-roboto {
+  font-family: "Roboto";
 }
 
 .m-0 {
   margin: 0;
+}
+
+.w-100 {
+  width: 100%;
 }

@@ -12,7 +12,8 @@ h5,
 h6,
 button,
 hr,
-input {
+input,
+select {
   margin: 0;
   border: none;
   outline: none;
@@ -41,7 +42,8 @@ input {
 }
 
 html {
-  font-family: "Circular Std Medium";
+  font-family: "Circular Std Book";
+  font-size: 15px;
 }
 
 body {
@@ -63,6 +65,7 @@ body {
 
 .greeting {
   margin: 0 6px 23px 32px;
+  color: #363c44;
 }
 
 .greeting > .fas {
@@ -83,6 +86,10 @@ body {
   height: 100%;
   width: 164px;
   margin-left: 10px;
+}
+
+.search > input::placeholder {
+  color: #c7c7cd;
 }
 
 .search > i {
@@ -156,6 +163,7 @@ main {
   min-height: 90vh;
   margin-top: 45px;
   margin-left: 308px;
+  margin-right: 36px;
 }
 
 .project-header {
@@ -167,6 +175,7 @@ main {
 
 .project-title {
   color: #363c44;
+  font-size: 22px;
 }
 
 .project-title > i {
@@ -213,6 +222,10 @@ main {
   width: 315.2px;
 }
 
+.project-summary h3 {
+  margin-bottom: 4px;
+}
+
 .project-summary h3,
 h5 {
   color: #3b4848;
@@ -225,6 +238,10 @@ h5 {
 .project-summary h4 {
   font-size: 14.4px;
   color: #09abf4;
+}
+
+.project-summary p:first-of-type {
+  line-height: 1.31;
 }
 
 .project-summary p {
@@ -285,4 +302,99 @@ h5 {
   width: 18px;
   height: 18px;
   border: 1px solid #eaeaea;
+}
+
+.project-body .right-area {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.right-area .dropdown-selector {
+  position: relative;
+  width: 307px;
+  height: 36.9px;
+  background-color: #fafbfc;
+  overflow: hidden;
+  padding-left: 16.7px;
+  margin-left: 18px;
+  box-sizing: border-box;
+}
+
+.right-area .dropdown-selector select {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #8dabc4;
+  background-color: transparent;
+}
+
+.right-area .dropdown-selector i {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  color: #a8c6df;
+  font-size: 13px;
+  background-color: #fafbfc;
+  padding-right: 17.6px;
+}
+
+.calendar-heading {
+  width: 152.2px;
+  margin-left: 34.7px;
+  margin-top: 11.3px;
+}
+
+.calendar-heading .date-range {
+  font-size: 11.4px;
+  padding-left: 8.8px;
+  padding-right: 7.9px;
+  height: 22px;
+  border-radius: 88px;
+  color: #0093ee;
+}
+
+.calendar-heading .date-range span {
+  margin-left: 2.9px;
+}
+
+.calendar-heading .month {
+  color: #2c405a;
+}
+
+.calendar {
+  width: 274.4px;
+  margin-left: 43px;
+  border-spacing: 0 12px;
+}
+
+.calendar .days {
+  font-size: 11.4px;
+  line-height: 1.46;
+  color: #8dabc4;
+}
+
+.calendar .dates {
+  font-size: 14px;
+  color: #3f536e;
+  flex-wrap: wrap;
+}
+
+.calendar .date {
+  text-align: center;
+}
+
+.calendar .date.start {
+  border-radius: 88px 0 0 88px;
+}
+
+.calendar .date.end {
+  border-radius: 0 88px 88px 0;
+}
+
+.calendar .date div {
+  width: 15px;
+  height: 15px;
+  padding: 4px;
+  margin: 0 auto;
 }

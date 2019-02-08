@@ -2,6 +2,10 @@
   color: #0090f7;
 }
 
+.bd-blue {
+  border: 0.9px solid #0090f799;
+}
+
 .bg-blue {
   background-color: #0090f7;
 }
@@ -28,4 +32,8 @@
 
 .white {
   color: #ffffff;
+}
+
+.highlighted {
+  background-color: #d8e5ee1a;
 }
