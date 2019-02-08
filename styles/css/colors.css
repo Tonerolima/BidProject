@@ -6,6 +6,18 @@
   background-color: #0090f7;
 }
 
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-light {
+  background-color: #fafbfc;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
 .light {
   color: #a4aab3;
 }

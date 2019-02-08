@@ -11,13 +11,33 @@ h4,
 h5,
 h6,
 button,
-hr {
+hr,
+input {
   margin: 0;
   border: none;
+  outline: none;
+  font-weight: normal;
 }
 
-.m-0 {
-  margin: 0;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c5d9e8;
+  border-radius: 10px;
 }
 
 html {
@@ -31,6 +51,9 @@ body {
 }
 
 .side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 281px;
   height: 100%;
   background-color: #ffffff;
@@ -126,4 +149,140 @@ nav > button {
 .nav-item.active {
   border: 1px solid #e7e7e7;
   padding-left: 15px;
+}
+
+main {
+  min-width: 1096px;
+  min-height: 90vh;
+  margin-top: 45px;
+  margin-left: 308px;
+}
+
+.project-header {
+  padding-left: 54px;
+  padding-right: 42px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  height: 64px;
+}
+
+.project-title {
+  color: #363c44;
+}
+
+.project-title > i {
+  margin-right: 22px;
+}
+
+.cost .current {
+  color: rgba(0, 0, 0, 0.51);
+}
+
+.progress-bar {
+  width: 173px;
+  height: 7px;
+  border-radius: 3.5px;
+  background-color: #eeeeee;
+  margin-top: 5px;
+}
+
+.progress-bar > .current {
+  width: 40%;
+  height: 100%;
+  background-color: #0ac775;
+}
+
+.project-body {
+  height: 764px;
+}
+
+.project-body > .main-area {
+  width: 751px;
+  height: 100%;
+  border-right: 1px solid #eeeeee;
+}
+
+.project-summary-area {
+  padding-top: 26px;
+  height: calc(100% - 330px);
+  border-bottom: 1px solid #eeeeee;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.project-summary {
+  width: 315.2px;
+}
+
+.project-summary h3,
+h5 {
+  color: #3b4848;
+}
+
+.project-summary h5 {
+  font-size: 13.5px;
+}
+
+.project-summary h4 {
+  font-size: 14.4px;
+  color: #09abf4;
+}
+
+.project-summary p {
+  font-size: 11.7px;
+  line-height: 1.46;
+}
+
+.project-body .categories {
+  margin-top: 17.4px;
+}
+
+.project-body .requirements {
+  height: 330px;
+  overflow-y: scroll;
+}
+
+.project-body .summary {
+  margin-top: 19.1px;
+}
+
+.requirements {
+  padding-top: 18px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.requirements-header {
+  width: 150px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.requirements-header > .active {
+  color: #0090f7;
+  border-bottom: 1px solid #0090f7;
+}
+
+.requirements .options {
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.requirements .option {
+  width: 239px;
+  height: 38px;
+  border: 1px solid #d8e5ee;
+  padding-left: 15px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  margin: 0 5px 5px 0;
+}
+
+.requirements .option.selected {
+  color: #0090f7;
+}
+
+.requirements .option .checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #eaeaea;
 }
