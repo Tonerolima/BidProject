@@ -186,7 +186,7 @@ main {
   color: rgba(0, 0, 0, 0.51);
 }
 
-.progress-bar {
+.project-header .progress-bar {
   width: 173px;
   height: 7px;
   border-radius: 3.5px;
@@ -194,7 +194,7 @@ main {
   margin-top: 5px;
 }
 
-.progress-bar > .current {
+.project-header .progress-bar > .current {
   width: 40%;
   height: 100%;
   background-color: #0ac775;
@@ -397,4 +397,64 @@ h5 {
   height: 15px;
   padding: 4px;
   margin: 0 auto;
+}
+
+.cost-estimator {
+  color: #3f536e;
+  margin-left: 21px;
+  margin-right: 22px;
+  margin-top: 25px;
+}
+
+.cost-estimator p:first-of-type {
+  margin-bottom: 15px;
+}
+
+.cost-estimator .progress-bar {
+  width: 100%;
+  height: 4px;
+  margin-top: 12px;
+  background-color: #e4f5ff;
+}
+
+.cost-estimator .progress-bar .current {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #0093ee;
+}
+
+.cost-estimator .progress-bar .current::after {
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #0093ee;
+  border-radius: 50%;
+}
+
+.tags {
+  width: 268px;
+  height: 245px;
+  flex-wrap: wrap;
+  margin-left: 38px;
+  margin-top: 33px;
+  color: #0093ee;
+}
+
+.tags > .tag {
+  position: relative;
+  background-color: #e4f5ff;
+  border-radius: 88px;
+  height: 25px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding-right: 12px;
+}
+
+.tags > .tag > span {
+  position: absolute;
+  right: 12px;
 }
