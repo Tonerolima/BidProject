@@ -44,10 +44,14 @@ document.querySelector(".requirements").addEventListener("click", e => {
 
 slider.oninput = e => {
   const value = Number(e.currentTarget.value);
-  const left = (value - 10000) / 50 - 30;
-  const top = value < 15000 || value > 21000 ? 70 : 31;
+  const left = (value - 10000) / 50;
+  const top = value < 13000 || value > 20000 ? 80 : 31;
+
   const toolTip = document.querySelector(".cost-estimator > .tool-tip");
-  toolTip.style.left = `${top === 70 ? left - 20 : left}px`;
+  const indicator = document.querySelector(".range-indicator");
+
+  toolTip.style.left = `${left}px`;
   toolTip.style.top = `${top}px`;
   toolTip.textContent = `$${value}`;
+  indicator.style.width = `${left}px`;
 };

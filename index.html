@@ -486,16 +486,20 @@
                 <span>$10,000</span>
                 <span>$25,000</span>
               </div>
-              <input
-                type="range"
-                class="w-100"
-                id="cost-slider"
-                min="10000"
-                max="25000"
-                step="1000"
-                value="10000"
-                pos="20%"
-              />
+              <div class="slider-wrapper w-100 ps-r">
+                <input
+                  type="range"
+                  class="w-100 rounded"
+                  id="cost-slider"
+                  min="10000"
+                  max="25000"
+                  step="1000"
+                  value="10000"
+                  pos="20%"
+                />
+                <div class="rounded range-indicator"></div>
+              </div>
+
               <span class="light tool-tip"></span>
             </div>
             <div class="tags fs-md d-fc">

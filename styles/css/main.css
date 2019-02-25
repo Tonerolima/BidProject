@@ -539,7 +539,7 @@ h5 {
   margin-bottom: 15px;
 }
 
-.cost-estimator > input {
+.cost-estimator input {
   background-color: #e4f5ff;
   height: 4px;
   -webkit-appearance: none;
@@ -554,11 +554,11 @@ h5 {
   visibility: hidden;
 }
 
-.cost-estimator > input:hover + .tool-tip {
+.cost-estimator .slider-wrapper:hover + .tool-tip {
   visibility: visible;
 }
 
-.cost-estimator > input::-webkit-slider-thumb {
+.cost-estimator input::-webkit-slider-thumb {
   background: #0093ee;
   height: 12px;
   width: 12px;
@@ -566,6 +566,14 @@ h5 {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
+}
+
+.cost-estimator .range-indicator {
+  height: 4px;
+  width: 0px;
+  background: #0093ee;
+  position: absolute;
+  top: 9px;
 }
 
 .tags {
