@@ -95,3 +95,7 @@
 .hidden {
   visibility: hidden;
 }
+
+.ps-r {
+  position: relative;
+}

@@ -4,6 +4,7 @@ const requirements = document.querySelector(".requirements-list");
 const bundles = document.querySelector(".bundles");
 const bundleToggle = document.getElementById("bundle");
 const requirementsToggle = document.getElementById("requirements");
+const slider = document.getElementById("cost-slider");
 
 const show = elements => {
   elements.forEach(elem => {
@@ -40,3 +41,13 @@ document.querySelector(".requirements").addEventListener("click", e => {
     setActive(bundleToggle, "remove");
   }
 });
+
+slider.oninput = e => {
+  const value = Number(e.currentTarget.value);
+  const left = (value - 10000) / 50 - 30;
+  const top = value < 15000 || value > 21000 ? 70 : 31;
+  const toolTip = document.querySelector(".cost-estimator > .tool-tip");
+  toolTip.style.left = `${top === 70 ? left - 20 : left}px`;
+  toolTip.style.top = `${top}px`;
+  toolTip.textContent = `$${value}`;
+};

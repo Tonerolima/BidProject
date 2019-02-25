@@ -544,6 +544,18 @@ h5 {
   height: 4px;
   -webkit-appearance: none;
   appearance: none;
+  position: relative;
+}
+
+.cost-estimator .tool-tip {
+  position: absolute;
+  left: 0%;
+  top: 31px;
+  visibility: hidden;
+}
+
+.cost-estimator > input:hover + .tool-tip {
+  visibility: visible;
 }
 
 .cost-estimator > input::-webkit-slider-thumb {
