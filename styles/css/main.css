@@ -61,6 +61,7 @@ body {
   background-color: #ffffff;
   padding-top: 23px;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .greeting {
