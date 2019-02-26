@@ -414,11 +414,11 @@ h5 {
   color: #3f536e;
 }
 
-.bundle-icon:nth-of-type(2) {
+/* .bundle-icon:nth-of-type(2) {
   cursor: pointer;
-}
+} */
 
-.bundle-icon:nth-of-type(2):hover::before {
+/* .bundle-icon:nth-of-type(2):hover::before {
   position: absolute;
   right: -25px;
   content: "3 Pages";
@@ -431,11 +431,7 @@ h5 {
   box-sizing: border-box;
   font-size: 13px;
   color: #0093ee;
-}
-
-.bundle-icon:nth-of-type(2)::after {
-  opacity: 0.5;
-}
+} */
 
 .bundles .bundle-icons .bundle-icon .task-level {
   color: #3f536e;

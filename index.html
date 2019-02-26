@@ -11,6 +11,7 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <script src="./js/dragndrop.js"></script>
     <title>BidProject</title>
   </head>
   <body class="m-0">
@@ -191,12 +192,12 @@
               <hr class="w-100" />
               <div class="requirements">
                 <div class="requirements-header d-if justify-content-b">
-                  <h5 class="toggler fs-md light active" id="requirements">
+                  <h5 class="toggler fs-md light " id="requirements">
                     Requirements
                   </h5>
-                  <h5 class="toggler fs-md light" id="bundle">Bundle</h5>
+                  <h5 class="toggler fs-md light active" id="bundle">Bundle</h5>
                 </div>
-                <div class="requirements-list">
+                <div class="requirements-list d-0">
                   <div class="options d-f fs-md">
                     <div
                       class="option d-f justify-content-b rounded light align-items-c"
@@ -359,7 +360,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="bundles d-fc align-items-c d-0">
+                <div class="bundles d-fc align-items-c ">
                   <div class="expand-icon">
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
@@ -372,30 +373,56 @@
                     <div
                       class="bundle-icon circle d-fc justify-content-c align-items-c"
                       data-caption="Developer 1"
+                      ondrop="drop(event)"
+                      ondragover="dragover(event)"
+                      ondragenter="dragenter(event)"
+                      ondragleave="dragleave(event)"
                     >
                       <p class="icon-text d-fc justify-content-c align-items-c">
-                        <span class="task-count">5 Tasks</span>
-                        <span class="task-level fs-sm"
-                          >Complexity Level: Hard</span
-                        >
+                        <span class="task-count">0 Tasks</span>
+                        <span class="task-level fs-sm"></span>
                       </p>
+                      <img
+                        src="./icons/plus-icon.png"
+                        alt="plus icon"
+                        class="d-0"
+                      />
                     </div>
                     <div
                       class="bundle-icon circle d-fc justify-content-c align-items-c"
-                      data-caption="2 Items Added"
+                      data-caption="Developer 2"
+                      ondrop="drop(event)"
+                      ondragover="dragover(event)"
+                      ondragenter="dragenter(event)"
+                      ondragleave="dragleave(event)"
                     >
-                      <img src="./icons/plus-icon.png" alt="plus icon" />
+                      <p class="icon-text d-fc justify-content-c align-items-c">
+                        <span class="task-count">0 Tasks</span>
+                        <span class="task-level fs-sm"></span>
+                      </p>
+                      <img
+                        src="./icons/plus-icon.png"
+                        alt="plus icon"
+                        class="d-0"
+                      />
                     </div>
                     <div
                       class="bundle-icon circle d-fc justify-content-c align-items-c"
                       data-caption="Developer 3"
+                      ondrop="drop(event)"
+                      ondragover="dragover(event)"
+                      ondragenter="dragenter(event)"
+                      ondragleave="dragleave(event)"
                     >
                       <p class="icon-text d-fc justify-content-c align-items-c">
-                        <span class="task-count">7 Tasks</span>
-                        <span class="task-level fs-sm"
-                          >Complexity Level: Easy</span
-                        >
+                        <span class="task-count">0 Tasks</span>
+                        <span class="task-level fs-sm"></span>
                       </p>
+                      <img
+                        src="./icons/plus-icon.png"
+                        alt="plus icon"
+                        class="d-0"
+                      />
                     </div>
                   </div>
                 </div>
@@ -507,67 +534,151 @@
                 <span class="light tool-tip"></span>
               </div>
               <div class="tags fs-md d-fc">
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Design<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   iOS<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Web<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   3 Pages<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   3D<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Sketch<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   UI/UX<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Marketting<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Profiles<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Hybrid<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Location<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Algorithm<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Payments<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   In App Pur.<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Coding<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Search<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Logo<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Android<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Coding<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Gaming<span>x</span>
                 </button>
-                <button class="tag d-f justify-content-c align-items-c">
+                <button
+                  draggable="true"
+                  ondragstart="dragstart(event)"
+                  class="tag d-f justify-content-c align-items-c"
+                >
                   Sprite<span>x</span>
                 </button>
               </div>
