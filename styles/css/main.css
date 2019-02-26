@@ -414,24 +414,16 @@ h5 {
   color: #3f536e;
 }
 
-/* .bundle-icon:nth-of-type(2) {
-  cursor: pointer;
-} */
+.bundle-icon .task-count {
+  position: relative;
+  padding-left: 16px;
+}
 
-/* .bundle-icon:nth-of-type(2):hover::before {
+.bundle-icon .task-count::before {
+  content: attr(data-count);
   position: absolute;
-  right: -25px;
-  content: "3 Pages";
-  width: 78px;
-  height: 25px;
-  background-color: #e4f5ff;
-  border-radius: 100px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-  padding: 5px 16px 0 16px;
-  box-sizing: border-box;
-  font-size: 13px;
-  color: #0093ee;
-} */
+  left: 0;
+}
 
 .bundles .bundle-icons .bundle-icon .task-level {
   color: #3f536e;

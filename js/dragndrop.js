@@ -1,3 +1,16 @@
+function showPlusIcon(e) {
+  const text = e.target.querySelector("p");
+  const icon = e.target.querySelector("img");
+  if (text) text.classList.add("d-0");
+  if (icon) icon.classList.remove("d-0");
+}
+function hidePlusIcon(e) {
+  const text = e.target.querySelector("p");
+  const icon = e.target.querySelector("img");
+  if (text) text.classList.remove("d-0");
+  if (icon) icon.classList.add("d-0");
+}
+
 function dragstart(e) {
   e.dataTransfer.setData("text/plain", "True");
   e.dataTransfer.dropEffect = "move";
@@ -8,20 +21,26 @@ function dragover(e) {
 }
 
 function dragenter(e) {
-  const text = e.target.querySelector("p");
-  const icon = e.target.querySelector("img");
-  if (text) text.classList.add("d-0");
-  if (icon) icon.classList.remove("d-0");
+  showPlusIcon(e);
 }
 
 function dragleave(e) {
-  const text = e.target.querySelector("p");
-  const icon = e.target.querySelector("img");
-  if (text) text.classList.remove("d-0");
-  if (icon) icon.classList.add("d-0");
+  hidePlusIcon(e);
 }
 
 function drop(e) {
   e.preventDefault();
-  console.log("dropped");
+  hidePlusIcon(e);
+  const count = e.target.querySelector(".task-count");
+  const level = e.target.querySelector(".task-level");
+
+  const value = Number(count.getAttribute("data-count"));
+  count.setAttribute("data-count", `${Number(value + 1)}`);
+  count.textContent = value + 1 !== 1 ? "Tasks" : "Task";
+  level.textContent =
+    value < 4
+      ? "Complexity Level: Easy"
+      : value < 8
+      ? "Complexity Level: Moderate"
+      : "Complexity Level: Hard";
 }
