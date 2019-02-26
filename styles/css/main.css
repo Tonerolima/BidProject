@@ -601,9 +601,10 @@ h5 {
   cursor: move;
 }
 
-.tags > .tag > span {
+.tags > .tag::after {
+  content: "x";
   position: absolute;
-  right: 12px;
+  right: 10px;
 }
 
 .action-buttons {
