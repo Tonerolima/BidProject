@@ -592,6 +592,8 @@ h5 {
   margin-right: 5px;
   margin-bottom: 10px;
   padding-right: 12px;
+  color: #0093ee;
+  cursor: move;
 }
 
 .tags > .tag > span {
