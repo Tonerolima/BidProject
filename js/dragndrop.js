@@ -1,3 +1,5 @@
+var dragged;
+
 function showPlusIcon(e) {
   const text = e.target.querySelector("p");
   const icon = e.target.querySelector("img");
@@ -12,7 +14,7 @@ function hidePlusIcon(e) {
 }
 
 function dragstart(e) {
-  e.dataTransfer.setData("text/plain", "True");
+  dragged = e.target;
   e.dataTransfer.dropEffect = "move";
 }
 
@@ -31,6 +33,7 @@ function dragleave(e) {
 function drop(e) {
   e.preventDefault();
   hidePlusIcon(e);
+  dragged.parentNode.removeChild(dragged);
   const count = e.target.querySelector(".task-count");
   const level = e.target.querySelector(".task-level");
 
