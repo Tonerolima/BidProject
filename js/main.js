@@ -5,6 +5,7 @@ const bundles = document.querySelector(".bundles");
 const bundleToggle = document.getElementById("bundle");
 const requirementsToggle = document.getElementById("requirements");
 const slider = document.getElementById("cost-slider");
+const projectList = document.querySelectorAll(".projects-list > .project");
 
 const show = elements => {
   elements.forEach(elem => {
@@ -55,3 +56,27 @@ slider.oninput = e => {
   toolTip.textContent = `$${value}`;
   indicator.style.width = `${left}px`;
 };
+
+const showProject = projectName => {
+  document.getElementById(projectName).classList.add("active");
+};
+
+const hideProject = projectName => {
+  document.getElementById(projectName).classList.remove("active");
+};
+
+projectList.forEach(element => {
+  element.addEventListener("click", e => {
+    const clicked = e.currentTarget;
+    if (clicked.classList.contains("active")) {
+      return null;
+    }
+    const active = clicked.parentNode.querySelector(".active");
+    active.classList.remove("active");
+    clicked.classList.add("active");
+
+    // change visible project to the clicked one
+    showProject(clicked.dataset.title);
+    hideProject(active.dataset.title);
+  });
+});
