@@ -168,6 +168,14 @@ main {
   border: 1px solid #eeeeee;
 }
 
+.project-view-item {
+  display: none;
+}
+
+.project-view-item.active {
+  display: block;
+}
+
 .project-header {
   padding-left: 54px;
   padding-right: 42px;
